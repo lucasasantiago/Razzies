@@ -16,15 +16,19 @@ Segue abaixo as tecnologias utilizadas nesse projeto.
 
 ## Começando
 
-* Clone o projeto atual da branch Master
->    $ git clone -b master github.com/lucasasantiago/Razzies
-* Execute o projeto localmente por uma IDE como o Intellij ou executando o jar gerado no build:
->    $ mvn clean install (Para gerar o jar) 
->    $ java -jar Razzies-0.0.1-SNAPSHOT.jar (executar no diretório do jar gerado anteriormente) 
-* Teste o projeto pelo Postman importanto o curl abaixo:
->    $ curl --location 'http://localhost:8080/v1'
+```
+# Clone o projeto atual da branch Master
+$ git clone -b master github.com/lucasasantiago/Razzies
 
-*Observação: para alterar o arquivo de dados de entrada, substituir o arquivo movielist.csv no path src\main\resources\input  
+# Execute o projeto localmente por uma IDE como o Intellij ou executando o jar gerado no build:
+$ mvn clean install (Para gerar o jar) 
+$ java -jar Razzies-0.0.1-SNAPSHOT.jar (executar no diretório do jar gerado anteriormente) 
+
+# Teste o projeto pelo Postman importanto o curl abaixo:
+$ curl --location 'http://localhost:8080/v1'
+
+* Observação: para alterar o arquivo de dados de entrada, substituir o arquivo movielist.csv no path src\main\resources\input  
+```
 
 ## Links
 
