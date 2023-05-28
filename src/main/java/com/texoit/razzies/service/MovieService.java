@@ -44,6 +44,7 @@ public class MovieService {
     }
 
     public List<MovieModel> getMovieList(){
+        log.info("Starting MovieService getMovieList method.");
         return movieList;
     }
 

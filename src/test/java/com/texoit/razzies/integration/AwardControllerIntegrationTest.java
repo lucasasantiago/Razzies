@@ -37,7 +37,7 @@ public class AwardControllerIntegrationTest {
 
         String expectedResponseContent = new String(resourceFile.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
 
-        mvc.perform(get("/v1/a")
+        mvc.perform(get("/v1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json(expectedResponseContent));
