@@ -3,14 +3,13 @@ package com.texoit.razzies.controller;
 import com.texoit.razzies.model.response.AwardRangeResponse;
 import com.texoit.razzies.service.AwardService;
 import com.texoit.razzies.service.MovieService;
-import com.texoit.razzies.model.MovieModel;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
+@Slf4j
 @RestController
 @RequestMapping("/v1")
 public class AwardController {
@@ -22,12 +21,8 @@ public class AwardController {
     private AwardService awardService;
 
     @GetMapping
-    public List<MovieModel> list(){
-        return movieService.getMovieList();
-    }
-
-    @GetMapping("/a")
     public AwardRangeResponse getAwardRange(){
+        log.info("Starting AwardController getAwardRange method");
         return awardService.getAwardRange();
     }
 }

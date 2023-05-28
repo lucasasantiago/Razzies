@@ -24,11 +24,15 @@ public class AwardService {
     private AwardMapper awardMapper;
 
     public AwardRangeResponse getAwardRange(){
+        log.info("Starting AwardService getAwardRange method");
+
         List<AwareRangeDTO> awareRangeDTOList = movieRepository.getProducerAwardRange();
         return buildAwardRangeResponse(awareRangeDTOList);
     }
 
     private AwardRangeResponse buildAwardRangeResponse(List<AwareRangeDTO> awareRangeDTOList) {
+        log.info("Starting AwardService buildAwardRangeResponse method");
+
         Integer maxInterval = awareRangeDTOList.stream().max(Comparator.comparing(AwareRangeDTO::getInterval)).get().getInterval();
         Integer minInterval = awareRangeDTOList.stream().min(Comparator.comparing(AwareRangeDTO::getInterval)).get().getInterval();
 
