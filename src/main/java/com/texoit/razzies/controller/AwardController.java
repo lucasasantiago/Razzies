@@ -20,7 +20,7 @@ public class AwardController {
     @Autowired
     private AwardService awardService;
 
-    @GetMapping
+    @GetMapping("/producer-award")
     public AwardRangeResponse getAwardRange(){
         log.info("Starting AwardController getAwardRange method");
         return awardService.getAwardRange();
